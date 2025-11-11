@@ -62,7 +62,7 @@ const Header = () => {
             <div className="flex flex-col w-full gap-5 xl:w-auto sm:flex-row xl:justify-between sm:items-center sm:gap-10">
               <Link className="shrink-0" href="/">
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/new_ZDA_Logo.png"
                   alt="Logo"
                   width={165}
                   height={36}
@@ -234,7 +234,7 @@ const Header = () => {
 
         <div className="xl:border-y border-b border-gray-3">
           <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 xl:px-0">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center">
               {/* <!--=== Main Nav Start ===--> */}
               {/* Desktop Nav Only */}
               <div
@@ -271,7 +271,7 @@ const Header = () => {
                 {/* //   <!-- Main Nav End --> */}
               </div>
               {/* // <!--=== Main Nav End ===--> */}
-              <div className="hidden xl:block">
+              {/* <div className="hidden xl:block">
                 <Link
                   href="/popular?sort=popular"
                   className="text-sm text-dark flex items-center font-medium hover:text-blue"
@@ -281,7 +281,7 @@ const Header = () => {
                     SALE
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

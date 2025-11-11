@@ -33,9 +33,9 @@ export async function generateMetadata({ params }: Params) {
     return {
       title: `${
         categoryData?.title || "Category Page"
-      } | NextMerce - Next.js E-commerce Template`,
+      } | ZDA Communications - Next.js E-commerce Template`,
       description: `${categoryData?.description?.slice(0, 136)}...`,
-      author: "NextMerce",
+      author: "ZDA Communications",
       alternates: {
         canonical: `${siteURL}/categories/${categoryData?.slug?.current}`,
         languages: {
@@ -58,10 +58,10 @@ export async function generateMetadata({ params }: Params) {
       },
 
       openGraph: {
-        title: `${categoryData?.title} | NextMerce`,
+        title: `${categoryData?.title} | ZDA Communications`,
         description: categoryData.description,
         url: `${siteURL}/categories/${categoryData?.slug?.current}`,
-        siteName: "NextMerce",
+        siteName: "ZDA Communications",
         images: [
           {
             url: imageBuilder(categoryData.image).url(),
@@ -76,10 +76,10 @@ export async function generateMetadata({ params }: Params) {
 
       twitter: {
         card: "summary_large_image",
-        title: `${categoryData?.title} | NextMerce`,
+        title: `${categoryData?.title} | ZDA Communications`,
         description: `${categoryData?.description?.slice(0, 136)}...`,
-        creator: "@NextMerce",
-        site: "@NextMerce",
+        creator: "@ZDA Communications",
+        site: "@ZDA Communications",
         images: [imageBuilder(categoryData.image).url()],
         url: `${siteURL}/categories/${categoryData?.slug?.current}`,
       },

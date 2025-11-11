@@ -9,8 +9,8 @@ import {
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Shop Page | NextMerce | Next.js E-commerce Boilerplate',
-  description: 'This is Shop Page for NextMerce Template',
+  title: 'Shop Page | ZDA Communications',
+  description: 'This is Shop Page for ZDA Communications Template',
   // other metadata
 };
 

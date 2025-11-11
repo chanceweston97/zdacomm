@@ -17,7 +17,7 @@ SITE_URL=http://localhost:3000
 1. Go to your Sanity Studio dashboard
 2. Navigate to API → Webhooks
 3. Create a new webhook with these settings:
-   - **Name**: NextMerce Revalidation
+   - **Name**: ZDA Communications Revalidation
    - **URL**: `https://your-domain.com/api/revalidate` (or `http://localhost:3000/api/revalidate` for development)
    - **Trigger on**: Create, Update, Delete
    - **Filter**: Leave empty to trigger on all documents, or use specific filters

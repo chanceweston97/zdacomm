@@ -9,8 +9,8 @@ import Testimonials from "@/components/Home/Testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NextMerce | Next.js E-commerce Boilerplate",
-  description: "This is Home for NextMerce Template",
+  title: "ZDA Communications - Home",
+  description: "This is Home for ZDA Communications",
   // other metadata
 };
 

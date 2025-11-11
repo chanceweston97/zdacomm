@@ -3,8 +3,8 @@ import BlogGrid from "@/components/BlogGrid";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Blog Grid Page | NextMerce | Next.js E-commerce Boilerplate",
-  description: "This is Blog Grid Page for NextMerce Template",
+  title: "Blog Grid Page | ZDA Communications",
+  description: "This is Blog Grid Page for ZDA Communications Template",
   // other metadata
 };
 

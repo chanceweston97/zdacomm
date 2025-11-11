@@ -30,6 +30,7 @@
     "nextjs-toploader": "^1.6.12",
     "nodemailer": "^6.9.13",
     "nvm": "^0.0.4",
+    "openssl": "^2.0.0",
     "prisma": "^6.19.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
