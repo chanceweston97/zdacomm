@@ -58,7 +58,7 @@ export default function HeroStatic() {
           <h3 className="text-sm font-semibold">
             Precision & Performance
           </h3>
-          <p className="mt-1 text-xs text-gray-700">"Unlock your potential with expert coaching and world-class facilities."</p>
+          <p className="mt-1 text-xs text-gray-700">&quot;Unlock your potential with expert coaching and world-class facilities.&quot;</p>
         </div>
       </aside>
     </section>
