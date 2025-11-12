@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Params) {
         siteName: "ZDA Communications",
         images: [
           {
-            url: imageBuilder(categoryData.image).url(),
+            // url: imageBuilder(categoryData.image).url(),
             width: 1800,
             height: 1600,
             alt: categoryData?.title,
@@ -74,15 +74,15 @@ export async function generateMetadata({ params }: Params) {
         type: "article",
       },
 
-      twitter: {
-        card: "summary_large_image",
-        title: `${categoryData?.title} | ZDA Communications`,
-        description: `${categoryData?.description?.slice(0, 136)}...`,
-        creator: "@ZDA Communications",
-        site: "@ZDA Communications",
-        images: [imageBuilder(categoryData.image).url()],
-        url: `${siteURL}/categories/${categoryData?.slug?.current}`,
-      },
+      // twitter: {
+      //   card: "summary_large_image",
+      //   title: `${categoryData?.title} | ZDA Communications`,
+      //   description: `${categoryData?.description?.slice(0, 136)}...`,
+      //   creator: "@ZDA Communications",
+      //   site: "@ZDA Communications",
+      //   images: [imageBuilder(categoryData.image).url()],
+      //   url: `${siteURL}/categories/${categoryData?.slug?.current}`,
+      // },
     };
   } else {
     return {

@@ -25,14 +25,14 @@ export default function HeroStatic() {
 
         <div className="mt-5 flex flex-wrap gap-3">
           <Link
-            href="/products"
+            href="/shop-with-sidebar"
             className="inline-flex items-center rounded-full bg-[#4E6FFF] hover:bg-[#3d58d1] text-white text-sm font-medium px-6 py-2.5"
           >
             All Products
           </Link>
 
           <Link
-            href="/custom-cable"
+            href="/cable-customizer"
             className="inline-flex items-center rounded-full bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-6 py-2.5 backdrop-blur"
           >
             Cable Customizer
