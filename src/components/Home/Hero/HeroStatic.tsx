@@ -18,12 +18,12 @@ export default function HeroStatic() {
 
       {/* ✅ Left text + buttons */}
       <div className="absolute z-10 left-6 sm:left-10 lg:left-16 top-1/3 md:top-1/2 -translate-y-1/2 max-w-[760px]">
-        <h1 className="text-white font-semibold leading-tight text-[20px] sm:text-[30px] lg:text-[32px] tracking-tight font-satoshi">
+        <h1 className="text-white font-semibold leading-tight text-[20px] sm:text-[30px] lg:text-[32px] tracking-tight font-satoshi mb-10">
           Field-tested antennas and cabling <br />
           built to improve signal where it counts.
         </h1>
 
-        <div className="mt-5 flex flex-wrap gap-3">
+        <div className="mt-5 flex flex-wrap gap-3 mb-10">
           <Link
             href="/shop-with-sidebar"
             className="inline-flex items-center rounded-full bg-[#4E6FFF] hover:bg-[#3d58d1] text-white text-sm font-medium px-6 py-2.5"
@@ -38,7 +38,7 @@ export default function HeroStatic() {
             Cable Customizer
           </Link>
         </div>
-        <p className="mt-6 text-white/90 text-4xl sm:text-5xl font-bold font-satoshi bottom-0">
+        <p className="text-white/90 text-5xl sm:text-7xl mt-26 font-bold font-satoshi bottom-0">
           ZDA Communications
         </p>
       </div>
