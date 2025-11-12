@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Params) {
     return {
       title: `${
         post.title || 'Single Post Page'
-      } | ZDA Communications - Next.js E-commerce Template`,
+      } | ZDA Communications`,
       description: `${post.metadata?.slice(0, 136)}...`,
       author: 'ZDA Communications',
       alternates: {

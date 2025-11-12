@@ -278,18 +278,16 @@ const product = {
     {
       name: "gain",
       title: "Gain (dBi)",
-      type: "number",
-      description: "Antenna gain in dBi",
-      validation: (Rule: any) =>
-            Rule.custom((fields: any) => {
-              if (
-                fields !== fields.toLowerCase() ||
-                fields.split(" ").includes("")
-              ) {
-                return "Gain must be number";
-              }
-              return true;
-            }),
+      type: "array",
+      description: "List of antenna gain values in dBi",
+      of: [
+        {
+          type: "number",
+          title: "Gain value (dBi)",
+          validation: (Rule: any) => Rule.required().min(0),
+        },
+      ],
+      validation: (Rule: any) => Rule.required().min(1).unique(),
     },
 
     // Quantity (stock)
