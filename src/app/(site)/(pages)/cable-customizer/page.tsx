@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "@/components/Cart";
+import CableCustomizer from "@/components/CableCustomizer";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const CartPage = () => {
+const CableCustomizerPage = () => {
   return (
     <>
-      <Cart />
+      <CableCustomizer />
     </>
   );
 };
 
-export default CartPage;
+export default CableCustomizerPage;
