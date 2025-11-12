@@ -2,6 +2,7 @@ import { getHeroBanners, getHeroSliders } from "@/sanity/sanity-shop-utils";
 import HeroFeature from "./HeroFeature";
 import HeroStatic from "./HeroStatic";
 import HeroIntroduction from "./HeroIntroduction";
+import ProudPartners from "./ProudPartners";
 
 const Hero = async () => {
   const data = await getHeroBanners();
@@ -14,6 +15,11 @@ const Hero = async () => {
           <div className="w-full">
             <div className="relative z-1 rounded-[10px]">
               <HeroStatic />
+              <HeroFeature />
+              <HeroIntroduction />
+              <ProudPartners />
+
+
             </div>
           </div>
 
@@ -30,9 +36,8 @@ const Hero = async () => {
       </div>
 
       {/* <!-- Hero features --> */}
-      <HeroFeature />
+
       <div className="relative z-1 rounded-[10px]">
-        <HeroIntroduction />
       </div>
     </section>
   );

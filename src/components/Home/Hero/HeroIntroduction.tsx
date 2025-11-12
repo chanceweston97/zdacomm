@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HeroIntroduction() {
     return (
         <section className="w-full">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div className="mx-auto max-w-7xl  py-12 lg:py-20">
                 {/* Heading */}
                 <h2 className="text-[#3a57b7] font-semibold leading-tight tracking-tight
                        text-3xl sm:text-5xl lg:text-[64px]">
