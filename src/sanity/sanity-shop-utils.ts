@@ -69,22 +69,40 @@ export const getProductsByFilter = cache(
   { tags: ["product"] }
 );
 
+
 export async function getAllProductsCount() {
-  return client.fetch<number>(groq`count(*[_type == "product"])`);
+  return client.fetch<number>(groq`
+    count(*[
+      _type == "product" &&
+      defined(slug.current) &&
+      !(_id in path("drafts.**"))
+    ])
+  `);
+}
+
+export async function getHighestPrice() {
+  return client.fetch<number>(groq`
+    *[
+      _type == "product" &&
+      defined(slug.current) &&
+      !(_id in path("drafts.**"))
+    ] | order(price desc)[0].price
+  `);
 }
 
 export async function getProduct(slug: string) {
   return sanityFetch<Product>({
-    query: groq`*[_type == "product" && slug.current == $slug] ${productData}[0]`,
+    query: groq`
+      *[
+        _type == "product" &&
+        slug.current == $slug &&
+        defined(slug.current) &&
+        !(_id in path("drafts.**"))
+      ] ${productData}[0]
+    `,
     tags: ["product"],
     qParams: { slug },
   });
-}
-
-export async function getHighestPrice() {
-  return client.fetch<number>(
-    groq`*[_type == "product"] | order(price desc)[0].price`
-  );
 }
 
 export async function getOrders(query: string) {
