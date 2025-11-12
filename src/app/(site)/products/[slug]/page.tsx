@@ -57,32 +57,32 @@ export async function generateMetadata({ params }: Props) {
       },
     },
 
-    openGraph: {
-      title: `${product?.name} | ZDA Communications`,
-      description: product.shortDescription,
-      url: `${siteURL}/products/${product?.slug?.current}`,
-      siteName: "ZDA Communications",
-      images: [
-        {
-          url: imageBuilder(product?.previewImages[0]?.image).url(),
-          width: 1800,
-          height: 1600,
-          alt: product?.name,
-        },
-      ],
-      locale: "en_US",
-      type: "article",
-    },
+    // openGraph: {
+    //   title: `${product?.name} | ZDA Communications`,
+    //   description: product.shortDescription,
+    //   url: `${siteURL}/products/${product?.slug?.current}`,
+    //   siteName: "ZDA Communications",
+    //   images: [
+    //     {
+    //       url: imageBuilder(product?.previewImages[0]?.image).url(),
+    //       width: 1800,
+    //       height: 1600,
+    //       alt: product?.name,
+    //     },
+    //   ],
+    //   locale: "en_US",
+    //   type: "article",
+    // },
 
-    twitter: {
-      card: "summary_large_image",
-      title: `${product?.name} | ZDA Communications`,
-      description: `${product?.shortDescription?.slice(0, 136)}...`,
-      creator: "@ZDA Communications",
-      site: "@ZDA Communications",
-      images: [imageBuilder(product?.previewImages[0]?.image).url()],
-      url: `${siteURL}/products/${product?.slug?.current}`,
-    },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   title: `${product?.name} | ZDA Communications`,
+    //   description: `${product?.shortDescription?.slice(0, 136)}...`,
+    //   creator: "@ZDA Communications",
+    //   site: "@ZDA Communications",
+    //   images: [imageBuilder(product?.previewImages[0]?.image).url()],
+    //   url: `${siteURL}/products/${product?.slug?.current}`,
+    // },
   };
 }
 

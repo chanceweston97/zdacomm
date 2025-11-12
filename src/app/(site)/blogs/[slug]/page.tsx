@@ -49,32 +49,32 @@ export async function generateMetadata({ params }: Params) {
         },
       },
 
-      openGraph: {
-        title: `${post.title} | ZDA Communications`,
-        description: post.metadata,
-        url: `${siteURL}/posts/${post?.slug?.current}`,
-        siteName: 'ZDA Communications',
-        images: [
-          {
-            url: imageBuilder(post.mainImage).url(),
-            width: 1800,
-            height: 1600,
-            alt: post.title,
-          },
-        ],
-        locale: 'en_US',
-        type: 'article',
-      },
+      // openGraph: {
+      //   title: `${post.title} | ZDA Communications`,
+      //   description: post.metadata,
+      //   url: `${siteURL}/posts/${post?.slug?.current}`,
+      //   siteName: 'ZDA Communications',
+      //   images: [
+      //     {
+      //       url: imageBuilder(post.mainImage).url(),
+      //       width: 1800,
+      //       height: 1600,
+      //       alt: post.title,
+      //     },
+      //   ],
+      //   locale: 'en_US',
+      //   type: 'article',
+      // },
 
-      twitter: {
-        card: 'summary_large_image',
-        title: `${post.title} | ZDA Communications`,
-        description: `${post.metadata?.slice(0, 136)}...`,
-        creator: '@ZDA Communications',
-        site: '@ZDA Communications',
-        images: [imageBuilder(post?.mainImage).url()],
-        url: `${siteURL}/blogs/${post?.slug?.current}`,
-      },
+      // twitter: {
+      //   card: 'summary_large_image',
+      //   title: `${post.title} | ZDA Communications`,
+      //   description: `${post.metadata?.slice(0, 136)}...`,
+      //   creator: '@ZDA Communications',
+      //   site: '@ZDA Communications',
+      //   images: [imageBuilder(post?.mainImage).url()],
+      //   url: `${siteURL}/blogs/${post?.slug?.current}`,
+      // },
     };
   } else {
     return {

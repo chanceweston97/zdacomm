@@ -16,6 +16,8 @@
     "@radix-ui/react-slider": "^1.2.0",
     "@reduxjs/toolkit": "^2.2.2",
     "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^7.12.1",
+    "@sanity/vision": "^4.15.0",
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^3.1.0",
     "algoliasearch": "^4.23.3",
