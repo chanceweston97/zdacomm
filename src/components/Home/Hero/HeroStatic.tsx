@@ -48,7 +48,7 @@ export default function HeroStatic() {
         <div className="relative w-full h-[240px]">
           <Image
             src="/images/products/antenna.png"
-            alt="Precision"
+            alt="Premium Antennas"
             fill
             className="object-fit opacity-70"
           />
@@ -56,9 +56,9 @@ export default function HeroStatic() {
 
         <div className="p-3">
           <h3 className="text-sm font-semibold">
-            Precision & Performance
+            Premium Antennas
           </h3>
-          <p className="mt-1 text-xs text-gray-700">&quot;Unlock your potential with expert coaching and world-class facilities.&quot;</p>
+          <p className="mt-1 text-xs text-gray-700">&quot;Superior Performance&quot;</p>
         </div>
       </aside>
     </section>

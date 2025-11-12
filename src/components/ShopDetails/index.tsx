@@ -201,9 +201,9 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   {product.name}
                 </h2>
 
-                <div className="inline-flex  rounded-full shrink-0 font-medium text-xs text-white bg-blue py-0.5 px-2.5">
+                {/* <div className="inline-flex  rounded-full shrink-0 font-medium text-xs text-white bg-blue py-0.5 px-2.5">
                   30% OFF
-                </div>
+                </div> */}
               </div>
 
               <div className="flex flex-wrap items-center gap-5.5 mb-4.5">
@@ -249,9 +249,9 @@ const ShopDetails = ({ product }: { product: Product }) => {
               </ul>
 
               <form onSubmit={(e) => e.preventDefault()}>
-                <div className="flex flex-col gap-4.5 border-y border-gray-3 mt-7.5 mb-9 py-9">
+                <div className="flex flex-col gap-4.5 border-gray-3 mt-7.5 mb-9 py-9">
                   {/* <!-- details item --> */}
-                  <div className="flex items-center gap-4">
+                  {/* <div className="flex items-center gap-4">
                     <div className="min-w-[65px]">
                       <h4 className="font-medium text-dark capitalize">
                         Color:
@@ -308,7 +308,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                         </label>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
                   {product?.customAttributes?.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-4">

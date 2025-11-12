@@ -10,15 +10,15 @@ const product = {
       validation: (Rule: any) => Rule.required(),
     },
     {
+      name: "descriptionTitle",
+      title: "Description Title",
+      type: "string",
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
       name: "description",
       title: "Description",
       type: "blockContent",
-    },
-    {
-      name: "shortDescription",
-      title: "Short Description",
-      type: "string",
-      validation: (Rule: any) => Rule.required(),
     },
     {
       name: "category",
@@ -37,20 +37,20 @@ const product = {
       name: "discountedPrice",
       title: "Price After Discount",
       type: "number",
-      validation: (Rule: any) => Rule.required(),
+      // validation: (Rule: any) => Rule.required(),
     },
 
-    {
-      name: "offers",
-      title: "Offers",
-      type: "array",
-      of: [
-        {
-          type: "string",
-          title: "Offer",
-        },
-      ],
-    },
+    // {
+    //   name: "offers",
+    //   title: "Offers",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "string",
+    //       title: "Offer",
+    //     },
+    //   ],
+    // },
 
     {
       name: "slug",
@@ -98,108 +98,108 @@ const product = {
         },
       ],
     },
-    {
-      name: "colors",
-      title: "Colors",
-      type: "array",
-      of: [
-        {
-          type: "string",
-          title: "Color",
-          validation: (Rule: any) =>
-            Rule.custom((fields: any) => {
-              if (
-                fields !== fields.toLowerCase() ||
-                fields.split(" ").includes("")
-              ) {
-                return "Colors must be lowercase and not be included space";
-              }
-              return true;
-            }),
-        },
-      ],
-    },
+    // {
+    //   name: "colors",
+    //   title: "Colors",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "string",
+    //       title: "Color",
+    //       validation: (Rule: any) =>
+    //         Rule.custom((fields: any) => {
+    //           if (
+    //             fields !== fields.toLowerCase() ||
+    //             fields.split(" ").includes("")
+    //           ) {
+    //             return "Colors must be lowercase and not be included space";
+    //           }
+    //           return true;
+    //         }),
+    //     },
+    //   ],
+    // },
 
-    {
-      name: "sizes",
-      title: "Sizes",
-      type: "array",
-      of: [
-        {
-          type: "string",
-          title: "Size",
-          validation: (Rule: any) =>
-            Rule.custom((fields: any) => {
-              if (
-                fields !== fields.toLowerCase() ||
-                fields.split(" ").includes("")
-              ) {
-                return "size must be lowercase and not be included space";
-              }
-              return true;
-            }),
-        },
-      ],
-    },
-    {
-      name: "customAttributes",
-      title: "Custom Attributes",
-      type: "array",
-      of: [
-        {
-          type: "object",
-          name: "customAttribute",
-          title: "Custom Attribute",
-          fields: [
-            {
-              name: "attributeName",
-              title: "Attribute Name",
-              type: "string",
-              validation: (Rule: any) => Rule.required(),
-            },
-            {
-              name: "attributeValues",
-              title: "Attribute Values",
-              type: "array",
-              of: [
-                {
-                  type: "object",
-                  name: "attributeValue",
-                  title: "Attribute Value",
-                  fields: [
-                    {
-                      name: "id",
-                      title: "ID",
-                      type: "string",
-                      validation: (Rule: any) => Rule.required(),
-                    },
-                    {
-                      name: "title",
-                      title: "Title",
-                      type: "string",
-                      validation: (Rule: any) => Rule.required(),
-                    },
-                  ],
-                  preview: {
-                    select: {
-                      title: "title",
-                      subtitle: "id",
-                    },
-                  },
-                },
-              ],
-              validation: (Rule: any) => Rule.required(),
-            },
-          ],
-          preview: {
-            select: {
-              title: "attributeName",
-              subtitle: "attributeValues.0.title",
-            },
-          },
-        },
-      ],
-    },
+    // {
+    //   name: "sizes",
+    //   title: "Sizes",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "string",
+    //       title: "Size",
+    //       validation: (Rule: any) =>
+    //         Rule.custom((fields: any) => {
+    //           if (
+    //             fields !== fields.toLowerCase() ||
+    //             fields.split(" ").includes("")
+    //           ) {
+    //             return "size must be lowercase and not be included space";
+    //           }
+    //           return true;
+    //         }),
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "customAttributes",
+    //   title: "Custom Attributes",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "object",
+    //       name: "customAttribute",
+    //       title: "Custom Attribute",
+    //       fields: [
+    //         {
+    //           name: "attributeName",
+    //           title: "Attribute Name",
+    //           type: "string",
+    //           validation: (Rule: any) => Rule.required(),
+    //         },
+    //         {
+    //           name: "attributeValues",
+    //           title: "Attribute Values",
+    //           type: "array",
+    //           of: [
+    //             {
+    //               type: "object",
+    //               name: "attributeValue",
+    //               title: "Attribute Value",
+    //               fields: [
+    //                 {
+    //                   name: "id",
+    //                   title: "ID",
+    //                   type: "string",
+    //                   validation: (Rule: any) => Rule.required(),
+    //                 },
+    //                 {
+    //                   name: "title",
+    //                   title: "Title",
+    //                   type: "string",
+    //                   validation: (Rule: any) => Rule.required(),
+    //                 },
+    //               ],
+    //               preview: {
+    //                 select: {
+    //                   title: "title",
+    //                   subtitle: "id",
+    //                 },
+    //               },
+    //             },
+    //           ],
+    //           validation: (Rule: any) => Rule.required(),
+    //         },
+    //       ],
+    //       preview: {
+    //         select: {
+    //           title: "attributeName",
+    //           subtitle: "attributeValues.0.title",
+    //         },
+    //       },
+    //     },
+    //   ],
+    // },
 
     {
       name: "additionalInformation",
@@ -215,13 +215,13 @@ const product = {
               name: "name",
               title: "Name",
               type: "string",
-              validation: (Rule: any) => Rule.required(),
+              // validation: (Rule: any) => Rule.required(),
             },
             {
               name: "description",
               title: "Description",
               type: "string",
-              validation: (Rule: any) => Rule.required(),
+              // validation: (Rule: any) => Rule.required(),
             },
           ],
           preview: {
@@ -274,6 +274,57 @@ const product = {
         },
       ],
     },
+    // Gain (dBi)
+    {
+      name: "gain",
+      title: "Gain (dBi)",
+      type: "number",
+      description: "Antenna gain in dBi",
+      validation: (Rule: any) =>
+            Rule.custom((fields: any) => {
+              if (
+                fields !== fields.toLowerCase() ||
+                fields.split(" ").includes("")
+              ) {
+                return "Gain must be number";
+              }
+              return true;
+            }),
+    },
+
+    // Quantity (stock)
+    {
+      name: "quantity",
+      title: "Quantity in Stock",
+      type: "number",
+      validation: (Rule: any) => Rule.required().min(0).integer(),
+    },
+
+    // Datasheet image (optional)
+    {
+      name: "datasheetImage",
+      title: "Datasheet Image",
+      type: "image",
+      options: { hotspot: true },
+      description: "Optional image of the datasheet cover/first page",
+    },
+
+    // Datasheet PDF (required)
+    {
+      name: "datasheet",
+      title: "Datasheet (PDF)",
+      type: "file",
+      options: { accept: "application/pdf", storeOriginalFilename: true },
+      fields: [
+        {
+          name: "label",
+          title: "Link label",
+          type: "string",
+          initialValue: "Download datasheet",
+        },
+      ],
+      validation: (Rule: any) => Rule.required(),
+    },
     {
       name: "previewImages",
       title: "Preview Images",
@@ -316,23 +367,23 @@ const product = {
         },
       ],
     },
-    {
-      name: "publishedAt",
-      title: "Published at",
-      type: "datetime",
-      validation: (Rule: any) => Rule.required(),
-    },
-    {
-      name: "status",
-      title: "Stock Status",
-      type: "boolean",
-    },
+    // {
+    //   name: "publishedAt",
+    //   title: "Published at",
+    //   type: "datetime",
+    //   validation: (Rule: any) => Rule.required(),
+    // },
+    // {
+    //   name: "status",
+    //   title: "Stock Status",
+    //   type: "boolean",
+    // },
 
-    {
-      name: "body",
-      title: "Body",
-      type: "blockContent",
-    },
+    // {
+    //   name: "body",
+    //   title: "Body",
+    //   type: "blockContent",
+    // },
   ],
   preview: {
     select: {

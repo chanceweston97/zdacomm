@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 /** ---------- CONFIG ---------- */
 const ASSET_BASE = "/images/cable-customizer/"; // put your images in /public/images/cable-customizer
@@ -108,19 +109,54 @@ export default function CustomCablePage() {
     setQuantity((q) => q + 1);
   }
 
-  async function handleAddToCart() {
-    // Wire to Shopify in your API route (this is a stub)
-    const payload = {
-      cableType: cable,
-      connectorA: aConn,
-      connectorB: bConn,
-      length: `${length} ft`,
-      quantity,
-      priceEach: Number(price.toFixed(2)),
-    };
-    console.log("Add to cart:", payload);
-    alert("Custom Cable Details" + JSON.stringify(payload, null, 2));
-  }
+
+const router = useRouter();
+
+const loadCart = () => {
+  if (typeof window === "undefined") return [];
+  try { return JSON.parse(localStorage.getItem("cart") || "[]"); } catch { return []; }
+};
+const saveCart = (items: any[]) => {
+  if (typeof window === "undefined") return;
+  localStorage.setItem("cart", JSON.stringify(items));
+};
+const configKey = (p: any) =>
+  `${p.cableType}|${p.connectorA}|${p.connectorB}|${p.length}`;
+
+async function handleAddToCart() {
+  const payload = {
+    cableType: cable,
+    connectorA: aConn,
+    connectorB: bConn,
+    length: `${length} ft`,
+    quantity,
+    priceEach: Number(price.toFixed(2)),
+    image: "/images/cable-customizer/cable.png", // ensure this file exists in /public
+  };
+
+  const line = {
+    id: "custom-cable",
+    title: "Custom Cable",
+    image: payload.image,
+    price: payload.priceEach,
+    qty: payload.quantity,
+    properties: {
+      "Cable Type": payload.cableType,
+      "Connector A": payload.connectorA,
+      "Connector B": payload.connectorB,
+      Length: payload.length,
+    },
+    _key: configKey(payload),
+  };
+
+  const cart = loadCart();
+  const i = cart.findIndex((it: any) => it.id === line.id && it._key === line._key);
+  if (i >= 0) cart[i].qty += line.qty; else cart.push(line);
+  saveCart(cart);
+
+  router.push("/cart");
+}
+
 
   return (
     <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 overflow-hidden pb-10 pt-51.5">
