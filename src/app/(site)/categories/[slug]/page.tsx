@@ -33,9 +33,9 @@ export async function generateMetadata({ params }: Params) {
     return {
       title: `${
         categoryData?.title || "Category Page"
-      } | ZDA Communications`,
+      } | NextMerce - Next.js E-commerce Template`,
       description: `${categoryData?.description?.slice(0, 136)}...`,
-      author: "ZDA Communications",
+      author: "NextMerce",
       alternates: {
         canonical: `${siteURL}/categories/${categoryData?.slug?.current}`,
         languages: {
@@ -57,29 +57,29 @@ export async function generateMetadata({ params }: Params) {
         },
       },
 
-      openGraph: {
-        title: `${categoryData?.title} | ZDA Communications`,
-        description: categoryData.description,
-        url: `${siteURL}/categories/${categoryData?.slug?.current}`,
-        siteName: "ZDA Communications",
-        images: [
-          {
-            // url: imageBuilder(categoryData.image).url(),
-            width: 1800,
-            height: 1600,
-            alt: categoryData?.title,
-          },
-        ],
-        locale: "en_US",
-        type: "article",
-      },
+      // openGraph: {
+      //   title: `${categoryData?.title} | NextMerce`,
+      //   description: categoryData.description,
+      //   url: `${siteURL}/categories/${categoryData?.slug?.current}`,
+      //   siteName: "NextMerce",
+      //   images: [
+      //     {
+      //       url: imageBuilder(categoryData.image).url(),
+      //       width: 1800,
+      //       height: 1600,
+      //       alt: categoryData?.title,
+      //     },
+      //   ],
+      //   locale: "en_US",
+      //   type: "article",
+      // },
 
       // twitter: {
       //   card: "summary_large_image",
-      //   title: `${categoryData?.title} | ZDA Communications`,
+      //   title: `${categoryData?.title} | NextMerce`,
       //   description: `${categoryData?.description?.slice(0, 136)}...`,
-      //   creator: "@ZDA Communications",
-      //   site: "@ZDA Communications",
+      //   creator: "@NextMerce",
+      //   site: "@NextMerce",
       //   images: [imageBuilder(categoryData.image).url()],
       //   url: `${siteURL}/categories/${categoryData?.slug?.current}`,
       // },

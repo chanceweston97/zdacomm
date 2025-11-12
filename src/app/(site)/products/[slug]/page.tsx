@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${
       product.name || "Single Product Page"
-    } | ZDA Communications - Next.js E-commerce Template`,
+    } | ZDA Communications `,
     description: `${product?.shortDescription?.slice(0, 136)}...`,
     author: "ZDA Communications",
     alternates: {
